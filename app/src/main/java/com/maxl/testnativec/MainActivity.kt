@@ -10,6 +10,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.maxl.testnativec.NativeLib.Companion.StringFromJNI
 import com.maxl.testnativec.ui.theme.TestNdkTheme
 
 class MainActivity : ComponentActivity() {
@@ -31,8 +32,7 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Greeting(name: String) {
-    var  nat = NativeLib()
-    Text(text = "Hello ${nat.stringFromJNI()}!")
+    Text(text = "Hello ${StringFromJNI()}!")
 }
 
 @Preview(showBackground = true)
